@@ -1,0 +1,148 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+border-radius: 5px;
+list-style: none;
+}
+
+
+.hero{
+    width: 100vw;
+    height: 30vh;
+    background: url(images/to-do-list-apps.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative; 
+    display: flex;
+}
+.hero::before{
+    content: "";
+    background:rgb(15, 168, 15);
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    opacity: 0.6;
+}
+.container{
+   width: 60vw;
+   height: 60vh;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   justify-content: top;
+   align-items: center;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-60%);
+   gap: 0.5rem;
+
+
+}
+.container .inputBox{
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    
+}
+.container input{
+    width: 100%;
+    padding: 12px;
+    position: relative;
+    border: none;
+  
+}
+.container .inputBox button{
+    position: absolute;
+    right: 15px;
+   align-self: center;
+   padding: 5px 10px;
+   border: none;
+   color: white;
+   background-color:#4cb82e;
+   border: green;
+   
+   
+    
+}
+.container h1{
+  
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+    padding-bottom: 20px;
+    align-self: flex-start;
+}
+
+.todoContainer,.followerContainer{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px ;
+    justify-content: space-between;
+
+}
+
+
+.followerContainer{
+    width: 100%;
+    align-items: flex-start;
+    overflow-y: scroll;
+ 
+}
+.todoList li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.bottomItems{
+  display: flex;
+  justify-content: space-between;
+}
+#deleteBtn{
+    background-color: rgb(15, 121, 29);
+    padding: 3px 6px;
+    color: white;
+    border: none;
+   
+}
+
+/* Followers section */
+
+.followers{
+    width: 60vw;
+    text-decoration: none;
+    display: flex;
+    gap: 2rem;
+    padding: 5px 0;
+    justify-content: left;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+    margin: 10px 0;
+   
+}
+
+
+.followers img{
+    width: 50px;
+    height: 50px;
+   object-fit: cover;
+   border-radius: 50%;
+}
+.followerContainer .userInfo a{
+font-size: 12px;
+text-decoration: none;
+color: black;
+
+}
+.todoContainer .goBack{
+align-self: flex-end;
+text-decoration: none;
+ color:grey;
+ display: block;
+
+
+}

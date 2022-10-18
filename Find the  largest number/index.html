@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Largest Number</title>
+    <style>
+      body {
+        margin: 30px 0 0 0;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        text-align: center;
+        padding: 20px;
+        border: none;
+        border-bottom: 2px solid black;
+      }
+      input:last-child {
+        border-bottom: 0;
+      }
+
+      .active {
+        background-color: pink;
+        color: white;
+        font-weight: 900;
+        border-radius: 10px;
+      }
+      #btn {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter a number to each field</h1>
+      <input
+        type="number"
+        name="firstNumber"
+        id="firstNumber"
+        placeholder="First Number"
+      />
+      <br />
+      <input
+        type="number"
+        name="secondNumber"
+        id="secondNumber"
+        placeholder="Second Number"
+      />
+      <br />
+      <input
+        type="number"
+        name="thirdNumber"
+        id="thirdNumber"
+        placeholder="Third Number"
+      />
+      <br />
+      <input id="btn" type="submit" value="Find the largest number  " />
+    </div>
+    <script>
+      const number1 = document.getElementById("firstNumber");
+      const number2 = document.getElementById("secondNumber");
+      const number3 = document.getElementById("thirdNumber");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        function largestNumber(a, b, c) {
+        
+          let maxNumber = 0;
+
+          if (a > b && a > c) {
+            maxNumber = a;
+            number1.classList.add("active");
+          } else if (b > c && b > a) {
+            maxNumber = b;
+            number2.classList.add("active");
+          } else {
+            maxNumber = c;
+            number3.classList.add("active");
+          }
+
+          return maxNumber;
+        }
+        largestNumber(number1.value, number2.value, number3.value);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Trailer Popup</title>
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font Awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <img
+        src="https://images.pexels.com/photos/3062545/pexels-photo-3062545.jpeg?auto=compress&cs=tinysrgb&w=300"
+        alt="Movie image"
+      />
+      <h1>Movie Title</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam nulla
+        nesciunt sed dignissimos ad quaerat quidem, cupiditate ut, explicabo,
+        molestiae sint eveniet sapiente maxime libero inventore quas non nam
+        enim.
+      </p>
+      <button class="btn">Watch now</button>
+    </div>
+    <div class="trailer-container active">
+      <video
+        src="https://player.vimeo.com/external/512523620.sd.mp4?s=df21286f0406421760d6b0cd0a36856881c76dd1&profile_id=164&oauth2_token_id=57447761"
+        controls
+      ></video>
+      <i class="fa-solid fa-xmark fa-2x close-icon"></i>
+    </div>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      const closeIcon = document.querySelector(".close-icon");
+      const trailerContainer = document.querySelector(".trailer-container");
+      const video = document.querySelector("video");
+      btn.addEventListener("click", () => {
+        trailerContainer.classList.remove("active");
+      });
+      closeIcon.addEventListener("click", () => {
+        trailerContainer.classList.add("active");
+        video.pause();
+        video.currentTime = 0;
+      });
+    </script>
+  </body>
+</html>

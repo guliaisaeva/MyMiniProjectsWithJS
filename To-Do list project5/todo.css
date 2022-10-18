@@ -1,0 +1,83 @@
+body {
+  height: 100vh;
+  background-image: url(https://media.istockphoto.com/photos/top-view-photo-of-reminders-and-white-pen-on-isolated-vivid-orange-picture-id1334475128?k=20&m=1334475128&s=612x612&w=0&h=OXTuEhVzJfJOLV_TBZln7fBzFoIH51hfRO9zRIlYy2g=);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#add-task-container {
+  width: 350px;
+  background-color: rgb(18, 215, 230);
+  padding: 20px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px;
+  display: flex;
+  margin-bottom: 20px;
+}
+input {
+  flex: 5;
+  transition: 0.3s;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+#add-task {
+  flex: 1;
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: #fff;
+  color: green;
+  border: green solid 2px;
+  border-radius: 10px;
+}
+#add-task:hover {
+  background-color: green;
+  color: #fff;
+}
+
+/* styling for tasks */
+.task {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 3px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.task li {
+  flex: 4;
+  list-style: none;
+  padding: 5px;
+  margin: 10px;
+  font-size: 1.3rem;
+}
+.task button {
+  flex: 1;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.task .checkTask {
+  color: orange;
+  margin-right: 5px;
+  border: solid 4px orange;
+  font-size: 1.5rem;
+}
+.task .checkTask:hover {
+  background-color: orange;
+  color: #fff;
+}
+.task .deleteTask {
+  color: red;
+  margin-right: 5px;
+  border: solid 4px red;
+  font-size: 1.2rem;
+}
+.task .deleteTask:hover {
+  background-color: red;
+  color: white;
+}
